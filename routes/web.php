@@ -1,18 +1,27 @@
 <?php
 
 use Illuminate\Foundation\Application;
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('Home', [
-        'name' => 'Fabrício Guimarães',
-        'frameworks' => ['Laravel', 'Inertia', 'Vue'],
+
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
+});
+
+Route::get('/users', function () {
+    sleep(3);
+    return Inertia::render('Users');
+});
+
+Route::get('/settings', function () {
+    return Inertia::render('Settings');
 });
 
 Route::middleware([
