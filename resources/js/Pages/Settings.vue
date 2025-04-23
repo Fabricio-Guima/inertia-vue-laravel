@@ -1,14 +1,18 @@
 <template>
-    <Head title="Settings" />
-    <div>
-        <h1 class="text-3xl">Settings Page</h1>
-    </div>
-    <Nav />
+    <Layout>
+
+        <Head title="Settings" />
+        <div>
+            <h1 class="text-3xl">Settings Page</h1>
+        </div>
+
+    </Layout>
+
 </template>
 
 <script setup>
 import { Head } from '@inertiajs/vue3';
-import Nav from '../Shared/Nav.vue';
+import Layout from '../Shared/Layout.vue';
 
 </script>
 
