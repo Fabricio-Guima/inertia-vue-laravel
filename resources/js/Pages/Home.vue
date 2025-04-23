@@ -14,6 +14,8 @@
 import { Head } from '@inertiajs/vue3';
 import Layout from '../Shared/Layout.vue';
 
+
+
 </script>
 
 <style lang="scss" scoped>
