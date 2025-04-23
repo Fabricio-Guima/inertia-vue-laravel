@@ -20,12 +20,14 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
+import { usePage } from "@inertiajs/vue3";
 import Nav from "./Nav.vue";
 
-const username = computed(() => $page.props.auth.user.name);
+// Acessa o objeto page
+const page = usePage();
 
-
-
+// Cria um valor computado para o nome do usuário
+const username = computed(() => page.props.auth.user.name);
 </script>
 
 <style scoped>
