@@ -1,5 +1,4 @@
 <template>
-    <Layout>
 
         <Head title="Users" />
         <div>
@@ -12,12 +11,16 @@
             <Link href="/users" class="text-blue-500 hover:underline" preserve-scroll>Refresh</Link>
         </div>
 
-    </Layout>
+
 </template>
 
 <script setup>
 import { Head } from '@inertiajs/vue3';
 import Layout from '../Shared/Layout.vue';
+
+defineOptions({
+  layout: Layout,
+})
 
 const props = defineProps({
     time: String,
